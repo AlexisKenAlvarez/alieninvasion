@@ -1,17 +1,29 @@
 import Loader from "./Loader";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Start from '../../videos/Start.mp4'
 
 const VideoPlayer = () => {
 
-    const [showVideo, setShow] = useState(false)
+    // const [showVideo, setShow] = useState(false)
     const [loading, setLoading] = useState(true);
+    const [trueLoading, setTrueLoading] = useState(true)
     const [start, setStart] = useState(false)
 
     const handleVideoLoaded = () => {
-        setLoading(false);
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
     };
+
+    useEffect(() => {
+        handleVideoLoaded()
+    }, [])
+
+
+    const handleTrue = () => {
+        setTrueLoading(false)
+    }
 
     const handleStart = () => {
         setStart(true)
@@ -27,16 +39,22 @@ const VideoPlayer = () => {
 
     return (
         <section className="bg-black w-full h-screen">
+
+            {
+                trueLoading ? <Loader /> : null
+            }
+
             {loading ?
                 <Loader /> :
-                null}
+                <video
+                    autoPlay
+                    src={Start}
+                    preload={'auto'}
+                    onLoadedData={handleTrue}
+                />}
 
-            <video
-                autoPlay
-                src={Start}
-                preload={'auto'}
-                onLoadedData={handleVideoLoaded}
-            />
+
+
         </section>
     );
 }
