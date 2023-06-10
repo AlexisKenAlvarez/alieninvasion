@@ -2,7 +2,7 @@ import Hero from "./pages/Hero"
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-black">
       <Hero />
     </div>
   )

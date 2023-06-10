@@ -3,14 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Start from '../../videos/Start.mp4'
 
-const VideoPlayer = () => {
+const VideoPlayer = ({ handleEnded }: { handleEnded: () => void }) => {
 
     // const [showVideo, setShow] = useState(false)
     const [loading, setLoading] = useState(true);
     const [trueLoading, setTrueLoading] = useState(true)
     const [start, setStart] = useState(false)
-
-    const [ended, setEnded] = useState(false)
 
     const handleVideoLoaded = () => {
         setTimeout(() => {
@@ -22,6 +20,19 @@ const VideoPlayer = () => {
         handleVideoLoaded()
     }, [])
 
+    const handleKeyPress = (event: { key: string; }) => {
+        if (event.key === 'Escape') {
+            handleEnded()
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyPress);
+        return () => {
+            window.removeEventListener('keydown', handleKeyPress);
+        };
+    }, []);
+
 
     const handleTrue = () => {
         setTrueLoading(false)
@@ -31,13 +42,6 @@ const VideoPlayer = () => {
         setStart(true)
     }
 
-    const handleEnd = () => {
-        console.log("VIDEO ENDED")
-        setEnded(true)
-    }
-
-
-
     if (start === false) {
         return (
             <div className="w-full h-screen cursor-pointer flex items-center justify-center bg-black" onClick={handleStart}>
@@ -46,9 +50,13 @@ const VideoPlayer = () => {
         )
     }
 
+
+
+
+
     return (
-        <section className="bg-black w-full h-screen">
-            <AnimatePresence mode="wait">
+        <motion.section transition={{ duration: 1 }} exit={{ maxHeight: "0rem", scale: 0 }} key="VIDEOPLAYERKEY" className="bg-black w-full h-screen origin-top max-h-[300rem]">
+            <AnimatePresence>
                 {
                     trueLoading ? <Loader key="LOADER1" /> : null
                 }
@@ -56,16 +64,26 @@ const VideoPlayer = () => {
 
             {loading ?
                 <Loader /> :
-                <video
-                    autoPlay
-                    src={Start}
-                    preload={'auto'}
-                    onLoadedData={handleTrue}
-                    onEnded={handleEnd}
-                    className="w-full h-screen object-cover"
-                />}
+                <div>
+                    <video
+                        autoPlay
+                        src={Start}
+                        preload={'auto'}
+                        onLoadedData={handleTrue}
+                        onEnded={handleEnded}
+                        className="w-full h-screen object-cover absolute top-0 left-0"
+                    />
+                    <div className="absolute bottom-5 right-5 flex items-center gap-x-3 text-white/50 font-orbit text-sm">
+                        <h3 className="">Press</h3>
 
-        </section>
+                        <div className="rounded-md border-[1px] px-4 py-2">
+                            <h3 className="">ESC</h3>
+                        </div>
+                        <h3 className="">to skip</h3>
+                    </div>
+                </div>}
+
+        </motion.section>
     );
 }
 
