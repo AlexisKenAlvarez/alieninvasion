@@ -10,6 +10,8 @@ const VideoPlayer = () => {
     const [trueLoading, setTrueLoading] = useState(true)
     const [start, setStart] = useState(false)
 
+    const [ended, setEnded] = useState(false)
+
     const handleVideoLoaded = () => {
         setTimeout(() => {
             setLoading(false);
@@ -28,6 +30,13 @@ const VideoPlayer = () => {
     const handleStart = () => {
         setStart(true)
     }
+
+    const handleEnd = () => {
+        console.log("VIDEO ENDED")
+        setEnded(true)
+    }
+
+
 
     if (start === false) {
         return (
@@ -51,9 +60,9 @@ const VideoPlayer = () => {
                     src={Start}
                     preload={'auto'}
                     onLoadedData={handleTrue}
+                    onEnded={handleEnd}
+                    className="w-full h-screen object-cover"
                 />}
-
-
 
         </section>
     );
