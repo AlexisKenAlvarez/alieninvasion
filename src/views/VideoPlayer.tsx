@@ -1,5 +1,5 @@
 import Loader from "./Loader";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Start from '../../videos/Start.mp4'
 
@@ -48,10 +48,11 @@ const VideoPlayer = () => {
 
     return (
         <section className="bg-black w-full h-screen">
-
-            {
-                trueLoading ? <Loader /> : null
-            }
+            <AnimatePresence mode="wait">
+                {
+                    trueLoading ? <Loader key="LOADER1" /> : null
+                }
+            </AnimatePresence>
 
             {loading ?
                 <Loader /> :
