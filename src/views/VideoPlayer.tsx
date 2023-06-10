@@ -73,14 +73,14 @@ const VideoPlayer = ({ handleEnded }: { handleEnded: () => void }) => {
                         onEnded={handleEnded}
                         className="w-full h-screen object-cover absolute top-0 left-0"
                     />
-                    <div className="absolute bottom-5 right-5 flex items-center gap-x-3 text-white/50 font-orbit text-sm">
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2, duration: 1 }} className="absolute bottom-5 right-5 flex items-center gap-x-3 text-white/50 font-orbit text-sm">
                         <h3 className="">Press</h3>
 
                         <div className="rounded-md border-[1px] px-4 py-2">
                             <h3 className="">ESC</h3>
                         </div>
                         <h3 className="">to skip</h3>
-                    </div>
+                    </motion.div>
                 </div>}
 
         </motion.section>
