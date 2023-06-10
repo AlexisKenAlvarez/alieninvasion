@@ -3,11 +3,21 @@ import { SiTwitter } from 'react-icons/si'
 import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa'
 import Nav from '../../components/Nav';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const HeroIndex = () => {
 
+    const [pos, setPos] = useState("absolute")
+
+    useEffect(() => {
+        setTimeout(() => {
+            setPos("relative")
+        }, 1500);
+    }, [])
+
+
     return (
-        <section className="text-white w-full h-screen px-10 overflow-hidden origin-center mx-auto" key="HeroIndex">
+        <section className={`text-white w-full h-screen px-10 overflow-hidden origin-center mx-auto ${pos} top-0 left-0`} key="HeroIndex">
 
 
             <motion.div initial={{ maxWidth: "50%" }} animate={{ maxWidth: "0%" }} transition={{ transformOrigin: "left", duration: 1.5, delay: 1, ease: [0.16, 0.77, 0.47, .97] }} className="z-[50] bg-black pointer-events-none absolute w-[50vw] h-screen left-0 top-0 origin-left"></motion.div>
