@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-[#111111] h-[19rem] p-10 relative flex items-center px-16">
+        <footer className="w-full bg-[#111111] h-[19rem] p-10 relative flex items-center px-16" id="socials">
 
             <div className="w-full relative z-10 text-white flex justify-between h-fit md:flex-row flex-col items-center gap-y-8 text-center">
                 <div className="font-orbit">

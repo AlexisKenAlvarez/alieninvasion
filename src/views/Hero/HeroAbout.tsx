@@ -10,7 +10,7 @@ const HeroAbout = () => {
 
 
     return (
-        <section className="w-full min-h-screen h-auto bg-black text-white overflow-x-hidden font-orbit relative z-10 px-10 py-10 pb-20" ref={ref}>
+        <section className="w-full min-h-screen h-auto bg-black text-white overflow-x-hidden font-orbit relative z-10 px-10 py-10 pb-20" ref={ref} id="about">
             <motion.h1 initial={{ x: -250, opacity: 0 }} animate={inView ? { x: 0, opacity: 1 } : {}} transition={{ duration: 1.5 }} className="font-alien text-white/5 text-[14rem] absolute left-0 top-10 select-none z-10">ALIENINVASION</motion.h1>
 
             <div className=" items-center gap-x-3 absolute w-full max-w-[1595px] mx-auto left-0 right-0 top-[13rem] lg:flex hidden px-10">

@@ -49,7 +49,7 @@ const Tokenomics = () => {
     ]
 
     return (
-        <section className="w-full h-screen text-white bg-black font-orbit overflow-hidden relative z-10 px-10 py-10 flex items-center" ref={ref}>
+        <section className="w-full h-screen text-white bg-black font-orbit overflow-hidden relative z-10 px-10 py-10 flex items-center" ref={ref} id="tokenomics">
 
             <div className=" items-center gap-x-3 absolute w-full max-w-[1595px] mx-auto left-0 right-0 top-[13rem] lg:flex hidden px-10">
                 <h1 className="w-5 h-5 flex items-center justify-center font-orbit">04</h1>
