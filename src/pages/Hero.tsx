@@ -6,6 +6,7 @@ import HeroIndex from "../views/Hero/HeroIndex";
 import HeroAbout from "../views/Hero/HeroAbout";
 import HeroInterview from "../views/Hero/HeroInterview";
 import HeroDeeper from "../views/Hero/HeroDeeper";
+import Tokenomics from "../views/Hero/Tokenomics";
 
 const Hero = () => {
 
@@ -24,7 +25,7 @@ const Hero = () => {
                         <HeroAbout />
                         <HeroDeeper />
                         <HeroInterview />
-
+                        <Tokenomics />
 
                     </>
                     : <VideoPlayer key="VIDEOENDED" handleEnded={handleEnded} />}

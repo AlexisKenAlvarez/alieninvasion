@@ -8,7 +8,7 @@ const Nav = () => {
             slug: '',
         },
         {
-            label: 'proofs',
+            label: 'tokenomics',
             slug: '',
         },
         {
