@@ -19,10 +19,10 @@ const Nav = () => {
     ]
 
     return (
-        <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className="z-30 sides absolute font-orbit uppercase left-0 sm:gap-x-20 w-fit h-fit -rotate-90 bottom-0 flex sm:top-0 my-auto sm:-ml-28 mb-36 sm:mb-auto  gap-x-10 -ml-20">
+        <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className="z-30 sides absolute font-orbit uppercase left-0 md:gap-x-20 w-fit h-fit -rotate-90 bottom-0 flex md:top-0 my-auto md:-ml-28 mb-36 md:mb-auto  gap-x-10 -ml-20">
             {navList.map((items, i) => {
                 return (
-                    <li className="cursor-pointer text-sm group" key={i}>
+                    <li className="cursor-pointer md:text-sm text-[12px] group" key={i}>
                         <p className="">{items.label}</p>
                         <div className="bg-white h-[2px] w-0 mx-auto mt-2 origin-center group-hover:w-full transition-all ease-in-out duration-200"></div>
                     </li>

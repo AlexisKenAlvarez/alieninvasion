@@ -55,7 +55,7 @@ const VideoPlayer = ({ handleEnded }: { handleEnded: () => void }) => {
 
 
     return (
-        <motion.section transition={{ duration: 1 }} exit={{ maxHeight: "0rem", scale: 0 }} key="VIDEOPLAYERKEY" className="bg-black w-full h-screen origin-top max-h-[300rem]">
+        <motion.section transition={{ duration: 1 }} exit={{ maxHeight: "0rem" }} key="VIDEOPLAYERKEY" className="bg-black w-full h-screen origin-top max-h-[300rem]">
             <AnimatePresence>
                 {
                     trueLoading ? <Loader key="LOADER1" /> : null
@@ -71,6 +71,7 @@ const VideoPlayer = ({ handleEnded }: { handleEnded: () => void }) => {
                         preload={'auto'}
                         onLoadedData={handleTrue}
                         onEnded={handleEnded}
+                        playsInline
                         className="w-full h-screen object-cover absolute top-0 left-0"
                     />
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3, duration: 1 }} className="absolute bottom-5 right-5 flex items-center gap-x-3 text-white/50 font-orbit text-sm">

@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         orbit: ['Orbit'],
         alien: ['Gasoek One']
+      },
+      colors: {
+        myCyan: '#4ECAF1'
       }
     },
   },

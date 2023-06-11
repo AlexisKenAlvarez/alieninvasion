@@ -3,6 +3,7 @@ import VideoPlayer from "../views/VideoPlayer";
 import { useState } from 'react'
 
 import HeroIndex from "../views/Hero/HeroIndex";
+import HeroAbout from "../views/Hero/HeroAbout";
 
 const Hero = () => {
 
@@ -15,8 +16,15 @@ const Hero = () => {
     return (
         <section className="">
             <AnimatePresence>
-                {ended ? <HeroIndex key="HeroIndex1" /> : <VideoPlayer key="VIDEOENDED" handleEnded={handleEnded} />}
+                {ended ?
+                    <>
+                        <HeroIndex key="HeroIndex1" />
+                        <HeroAbout />
+
+                    </>
+                    : <VideoPlayer key="VIDEOENDED" handleEnded={handleEnded} />}
             </AnimatePresence>
+
 
 
         </section>
