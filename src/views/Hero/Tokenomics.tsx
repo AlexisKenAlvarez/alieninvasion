@@ -2,6 +2,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer"
 import { useEffect } from 'react';
+import Appear from '../../anim/Appear';
 
 const Tokenomics = () => {
     const animation = useAnimation()
@@ -61,9 +62,21 @@ const Tokenomics = () => {
             <motion.img animate={animation} src="/astro.webp" alt="Astronaut" className="sm:block hidden absolute lg:right-10 lg:top-0 right-10 bottom-0 my-auto lg:w-auto w-[20rem]" />
 
             <div className="font-orbit relative z-10 w-full mx-auto max-w-[1500px]">
-                <h1 className="TOKENOMICS sm:text-xl sm:tracking-[1.5rem] tracking-widest">TOKENOMICS</h1>
-                <p className="xl:max-w-[50rem] max-w-[30rem] text-white/70 mt-2 text-sm sm:text-base">In the tokenomics of alien invasion, interstellar currency fluctuations are driven by the scarcity of Earth's resources, causing a speculative frenzy among extraterrestrial investors.</p>
-                <div className="flex flex-col gap-y-5 mt-16">
+                <Appear>
+
+                    <h1 className="TOKENOMICS sm:text-xl sm:tracking-[1.5rem] tracking-widest">TOKENOMICS</h1>
+                </Appear>
+
+                <Appear>
+                    <p className="xl:max-w-[50rem] max-w-[30rem] text-white/70 mt-2 text-sm sm:text-base">In the tokenomics of alien invasion, interstellar currency fluctuations are driven by the scarcity of Earth's resources, causing a speculative frenzy among extraterrestrial investors.</p>
+                </Appear>
+
+                <Appear>
+                    <h2 className="mt-10"><span className="text-4xl">1</span> Trillion Supply <span className='text-4xl'>0</span>% Tax</h2>
+
+                </Appear>
+
+                {/* <div className="flex flex-col gap-y-5 mt-16">
                     {tokenList.map((items, i) => {
                         return (
                             <div className="max-w-[50rem] flex gap-x-3 md:flex-row flex-col gap-y-3" key={i}>
@@ -75,7 +88,7 @@ const Tokenomics = () => {
                             </div>
                         )
                     })}
-                </div>
+                </div> */}
             </div>
 
         </section>
