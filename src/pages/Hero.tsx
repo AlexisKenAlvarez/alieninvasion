@@ -4,6 +4,8 @@ import { useState } from 'react'
 
 import HeroIndex from "../views/Hero/HeroIndex";
 import HeroAbout from "../views/Hero/HeroAbout";
+import HeroInterview from "../views/Hero/HeroInterview";
+import HeroDeeper from "../views/Hero/HeroDeeper";
 
 const Hero = () => {
 
@@ -20,6 +22,9 @@ const Hero = () => {
                     <>
                         <HeroIndex key="HeroIndex1" />
                         <HeroAbout />
+                        <HeroDeeper />
+                        <HeroInterview />
+
 
                     </>
                     : <VideoPlayer key="VIDEOENDED" handleEnded={handleEnded} />}

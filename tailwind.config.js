@@ -12,6 +12,11 @@ export default {
       },
       colors: {
         myCyan: '#4ECAF1'
+      },
+      boxShadow: {
+        inTop: '0px 24px 58px 5px rgba(0,0,0,1) inset',
+        inBottom: '0px -24px 58px 5px rgba(0,0,0,1) inset'
+
       }
     },
   },
