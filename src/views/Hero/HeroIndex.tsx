@@ -32,7 +32,7 @@ const HeroIndex = () => {
     }, []);
 
     useEffect(() => {
-        console.log(scrollPosition)
+
         if (scrollPosition >= 200) {
             setScrolled(true)
         } else {
@@ -88,7 +88,7 @@ const HeroIndex = () => {
 
             <div className="w-full h-full bg-black/70 z-10 absolute top-0 left-0"></div>
             <Nav />
-            
+
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className="w-fit h-fit -rotate-90 absolute right-0 -mr-24 bottom-0 z-10 top-0 my-auto items-center gap-x-4 sm:flex hidden">
                 <h1 className="font-orbit tracking-widest text-sm">INVASION HAS BEGUN</h1>
                 <div className="w-20 h-[1px] bg-white z-10 bottom-5 right-5"></div>
