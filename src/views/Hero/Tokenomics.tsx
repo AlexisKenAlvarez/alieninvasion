@@ -26,28 +26,28 @@ const Tokenomics = () => {
 
     }
 
-    const tokenList = [
-        {
-            label: 'Lorem Ipsum 1',
-            value: '30'
-        },
-        {
-            label: 'Lorem Ipsum 2',
-            value: '40'
-        },
-        {
-            label: 'Lorem Ipsum 3',
-            value: '20'
-        },
-        {
-            label: 'Lorem Ipsum 4',
-            value: '5'
-        },
-        {
-            label: 'Lorem Ipsum 5',
-            value: '5'
-        },
-    ]
+    // const tokenList = [
+    //     {
+    //         label: 'Lorem Ipsum 1',
+    //         value: '30'
+    //     },
+    //     {
+    //         label: 'Lorem Ipsum 2',
+    //         value: '40'
+    //     },
+    //     {
+    //         label: 'Lorem Ipsum 3',
+    //         value: '20'
+    //     },
+    //     {
+    //         label: 'Lorem Ipsum 4',
+    //         value: '5'
+    //     },
+    //     {
+    //         label: 'Lorem Ipsum 5',
+    //         value: '5'
+    //     },
+    // ]
 
     return (
         <section className="w-full h-screen text-white bg-black font-orbit overflow-hidden relative z-10 px-10 py-10 flex items-center" ref={ref} id="tokenomics">
