@@ -26,28 +26,28 @@ const Tokenomics = () => {
 
     }
 
-    // const tokenList = [
-    //     {
-    //         label: 'Lorem Ipsum 1',
-    //         value: '30'
-    //     },
-    //     {
-    //         label: 'Lorem Ipsum 2',
-    //         value: '40'
-    //     },
-    //     {
-    //         label: 'Lorem Ipsum 3',
-    //         value: '20'
-    //     },
-    //     {
-    //         label: 'Lorem Ipsum 4',
-    //         value: '5'
-    //     },
-    //     {
-    //         label: 'Lorem Ipsum 5',
-    //         value: '5'
-    //     },
-    // ]
+    const tokenList = [
+        {
+            label: 'Lorem Ipsum 1',
+            value: '30'
+        },
+        {
+            label: 'Lorem Ipsum 2',
+            value: '40'
+        },
+        {
+            label: 'Lorem Ipsum 3',
+            value: '20'
+        },
+        {
+            label: 'Lorem Ipsum 4',
+            value: '5'
+        },
+        {
+            label: 'Lorem Ipsum 5',
+            value: '5'
+        },
+    ]
 
     return (
         <section className="w-full h-screen text-white bg-black font-orbit overflow-hidden relative z-10 px-10 py-10 flex items-center" ref={ref} id="tokenomics">
@@ -70,13 +70,13 @@ const Tokenomics = () => {
                 <Appear>
                     <p className="xl:max-w-[50rem] max-w-[30rem] text-white/70 mt-2 text-sm sm:text-base">In the tokenomics of alien invasion, interstellar currency fluctuations are driven by the scarcity of Earth's resources, causing a speculative frenzy among extraterrestrial investors.</p>
                 </Appear>
-
+{/* 
                 <Appear>
                     <h2 className="mt-10"><span className="text-4xl">1</span> Trillion Supply <span className='text-4xl'>0</span>% Tax</h2>
 
-                </Appear>
+                </Appear> */}
 
-                {/* <div className="flex flex-col gap-y-5 mt-16">
+                <div className="flex flex-col gap-y-5 mt-16">
                     {tokenList.map((items, i) => {
                         return (
                             <div className="max-w-[50rem] flex gap-x-3 md:flex-row flex-col gap-y-3" key={i}>
@@ -88,7 +88,7 @@ const Tokenomics = () => {
                             </div>
                         )
                     })}
-                </div> */}
+                </div>
             </div>
 
         </section>
