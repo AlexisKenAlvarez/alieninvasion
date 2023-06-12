@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
 
             <motion.div initial={{ scale: 0, rotate: 360 }} whileInView={{ scale: 1, rotate: 0 }} transition={{ duration: 1, ease: [0.16, 0.77, 0.47, .97] }} className="absolute mx-auto left-0 right-0 top-0 bottom-0 my-auto w-fit h-fit">
-                <img src="/footer/centerfooter.webp" alt="Center Footer " className="lg:opacity-1 opacity-[0.3]" />
+                <img src="/logo.webp" alt="Center Footer " className="lg:opacity-[1] opacity-[0.3] w-[15rem] z-20 relative" />
             </motion.div>
         </footer>
     );

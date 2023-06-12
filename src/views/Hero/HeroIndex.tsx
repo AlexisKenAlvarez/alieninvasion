@@ -70,6 +70,8 @@ const HeroIndex = () => {
     return (
         <section className={`text-white w-full min-h-screen h-auto px-10 overflow-hidden origin-center mx-auto z-20 relative ${pos} top-0 left-0`} key="HeroIndex">
 
+            <img src="/logo.webp" alt="Logo" className="fixed z-40 w-16 sm:top-10 sm:right-14 right-10 top-6" />
+
 
             <motion.div initial={{ maxWidth: "50%" }} animate={{ maxWidth: "0%" }} transition={{ transformOrigin: "left", duration: 1.5, delay: 1, ease: [0.16, 0.77, 0.47, .97] }} className="z-[50] bg-black pointer-events-none absolute w-[50vw] h-screen left-0 top-0 origin-left"></motion.div>
 
@@ -105,7 +107,7 @@ const HeroIndex = () => {
                     <FaTelegramPlane className="cursor-pointer" />
                 </div>
 
-                <div className="font-orbit md:text-7xl sm:text-5xl text-3xl sm:mt-20 mt-10 flex-shrink-0 md:pl-14">
+                <div className="font-orbit md:text-7xl sm:text-5xl text-3xl sm:mt-20 mt-24 flex-shrink-0 md:pl-14">
                     <h1 className="tracking-widest">ALIEN INVASION</h1>
                     <p className="font-orbit sm:text-sm text-white/60 tracking-wider mt-2 text-[12px] leading-4 sm:leading-0">Across the vast expanse of space, an armada of extraterrestrial ships descended upon Earth, their ominous presence casting a dark shroud over the planet, while humanity stood united, determined to defend their home against the impending alien invasion.</p>
                 </div>
